@@ -1,7 +1,7 @@
 'use strict';
 
 // Imports dependencies and set up http server
-import * as admin from 'firebase-admin';
+
 
 const
   express = require('express'),
@@ -75,3 +75,14 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://my-project-97974.firebaseio.com"
 });
+
+
+
+
+
+
+
+
+
+
+
