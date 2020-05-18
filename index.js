@@ -1,6 +1,8 @@
 'use strict';
 
 // Imports dependencies and set up http server
+import * as admin from 'firebase-admin';
+
 const
   express = require('express'),
   bodyParser = require('body-parser'),
@@ -61,4 +63,15 @@ app.get('/webhook', (req, res) => {
       res.sendStatus(403);      
     }
   }
+});
+
+
+
+var admin = require("firebase-admin");
+
+var serviceAccount = require("/Users/abhinilagarwal/desktop/messenger-webhook/my-project-97974-firebase-adminsdk-hlc0d-a581d49fae.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://my-project-97974.firebaseio.com"
 });
