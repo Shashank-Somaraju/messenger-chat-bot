@@ -71,7 +71,7 @@ app.get('/webhook', (req, res) => {
 const functions = require('firebase-functions');
 const cors = require('cors')({ origin: true});
 const admin = require('firebase-admin');
-const serviceAccount = require('/Users/abhinilagarwal/desktop/messenger-webhook/my-project-97974-firebase-adminsdk-hlc0d-a581d49fae.json');
+const serviceAccount = require('/messenger-webhook/my-project-97974-firebase-adminsdk-hlc0d-a581d49fae.json');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
