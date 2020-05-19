@@ -44,7 +44,7 @@
     }
     console.log(sendTextMessage);
 
-    const h = (event) => {
+    module.exports = (event) => {
       const userId = event.sender.id;
       const message = event.message.text;
       console.log("testing 1");
@@ -70,5 +70,4 @@
         .catch(err => {
           console.error('ERROR:', err);
         });
-    }
-    module.exports =h;
+    };

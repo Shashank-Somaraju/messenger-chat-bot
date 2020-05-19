@@ -1,6 +1,6 @@
    const processMessage = require('./process-message');
 
-   const b = (req, res) => {
+   module.exports = (req, res) => {
       console.log(req);
       if (req.body.object === 'page') {
         console.log(req.body.object);
@@ -17,4 +17,4 @@
         res.status(200).end();
       }
     };
-    module.exports =b;
+  

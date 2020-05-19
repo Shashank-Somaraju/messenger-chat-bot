@@ -1,6 +1,6 @@
 
 // Imports dependencies and set up http server
-require('dotenv').config({ path: 'variables.env' });
+require('dotenv').config({ path: './variables.env' });
 
 
 
