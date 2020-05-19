@@ -2,7 +2,7 @@
    const processMessage = require('./process-message');
    console.log("hereb");
    module.exports = (req, res) => {
-      console.log(req);
+      console.log("herec");
       if (req.body.object === 'page') {
         console.log(req.body.object);
         req.body.entry.forEach(entry => {
