@@ -19,7 +19,7 @@ require('dotenv').config({ path: './variables.env' });
 
   app.post('/', messageWebhook);
 
-  app.listen(process.env.PORT || 5000, () => console.log('Express server is listening on port 1337'));
+  app.listen(process.env.PORT || 1337, () => console.log('Express server is listening on port 1337'));
 
   console.log("here1");
 
