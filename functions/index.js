@@ -1,7 +1,7 @@
 
 var admin = require("firebase-admin");
 
-var serviceAccount = require("/Users/abhinilagarwal/desktop/messenger-webhook/my-project-97974-firebase-adminsdk-hlc0d-a581d49fae.json");
+var serviceAccount = require("./my-project-97974-firebase-adminsdk-hlc0d-a581d49fae.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
