@@ -15,17 +15,15 @@ require('dotenv').config({ path: 'variables.env' });
 
   app.listen(1337, () => console.log('Express server is listening on port 1337'));
 
-  const verifyWebhook = require('./verify-webhook');
-
-  app.get('/', verifyWebhook);
-
-
 
   const messageWebhook = require('./message-webhook');
 
   app.post('/', messageWebhook);
 
 
+  const verifyWebhook = require('./verify-webhook');
+
+  app.get('/', verifyWebhook);
 
   
 
