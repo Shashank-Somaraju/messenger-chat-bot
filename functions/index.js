@@ -6,7 +6,6 @@
 // exports.helloWorld = functions.https.onRequest((request, response) => {
 //  response.send("Hello from Firebase!");
 // });
-//trying something for firebase
 const functions = require('firebase-functions');
 const cors = require('cors')({ origin: true});
 const admin = require('firebase-admin');
@@ -21,7 +20,8 @@ const { SessionsClient } = require('dialogflow');
 
 
 exports.dialogflowGateway = functions.https.onRequest((request, response) => {
-  cors(request, response, async () => {
+  
+cors(request, response, async () => {
     const { queryInput, sessionId } = request.body;
 
 
