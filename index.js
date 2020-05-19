@@ -20,8 +20,6 @@ const verifyWebhook = require('./verify-webhook');
 
   app.get('/', verifyWebhook);
 
- 
-
   app.post('/', messageWebhook);
 
 

@@ -42,10 +42,14 @@
         }
       );
     }
+    console.log(sendTextMessage);
 
-    module.exports = (event) => {
+    const h = (event) => {
       const userId = event.sender.id;
       const message = event.message.text;
+      console.log("testing 1");
+      console.log(userId);
+      console.log(message);
 
       const request = {
         session: sessionPath,
@@ -56,7 +60,7 @@
           },
         },
       };
-
+      console.log(request);
       sessionClient
         .detectIntent(request)
         .then(responses => {
@@ -67,3 +71,4 @@
           console.error('ERROR:', err);
         });
     }
+    module.exports =h;
