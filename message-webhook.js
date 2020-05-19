@@ -5,6 +5,8 @@
         req.body.entry.forEach(entry => {
           entry.messaging.forEach(event => {
             if (event.message && event.message.text) {
+              console.log("event");
+              console.log(event);
               processMessage(event);
             }
           });
