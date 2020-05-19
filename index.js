@@ -2,7 +2,8 @@
 
 // Imports dependencies and set up http server
 require('dotenv').config({ path: 'variables.env' });
-
+const messageWebhook = require('./message-webhook');
+const verifyWebhook = require('./verify-webhook');
 
 
   const express = require('express');
@@ -16,14 +17,17 @@ require('dotenv').config({ path: 'variables.env' });
   app.listen(1337, () => console.log('Express server is listening on port 1337'));
 
 
-  const messageWebhook = require('./message-webhook');
+  const verifyWebhook = require('./verify-webhook');
+  console.log("here");
+
+  app.get('/', verifyWebhook);
+
+ 
 
   app.post('/', messageWebhook);
 
 
-  const verifyWebhook = require('./verify-webhook');
-
-  app.get('/', verifyWebhook);
+ 
 
   
 
