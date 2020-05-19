@@ -16,7 +16,7 @@ const verifyWebhook = require('./verify-webhook');
 
   app.listen(1337, () => console.log('Express server is listening on port 1337'));
 
-  console.log("here");
+  console.log("here1");
 
   app.get('/', verifyWebhook);
 
