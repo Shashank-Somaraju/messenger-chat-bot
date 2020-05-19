@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 
     // You can find your project ID in your Dialogflow agent settings
-    const projectId = ''; //https://dialogflow.com/docs/agents#settings
+    const projectId = 'my-project-97974'; //https://dialogflow.com/docs/agents#settings
     const sessionId = '123456';
     const languageCode = 'en-US';
 

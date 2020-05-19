@@ -17,13 +17,15 @@ require('dotenv').config({ path: 'variables.env' });
 
 
 
-const verifyWebhook = require('./verify-webhook');
+  const verifyWebhook = require('./verify-webhook');
 
-app.get('/', verifyWebhook);
-
-
+  app.get('/', verifyWebhook);
 
 
+
+  const messageWebhook = require('./message-webhook');
+
+  app.post('/', messageWebhook);
 
 
 
