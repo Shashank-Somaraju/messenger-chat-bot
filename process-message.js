@@ -42,7 +42,7 @@
         }
       );
     }    
-    console.log("SENDING TEXT MESSAGE ....")
+    console.log("SENDING TEXT MESSAGE ....");
     console.log(sendTextMessage);
 
 

@@ -11,11 +11,13 @@
             //console.log(event.message);
             //console.log(event.message.text);
             if (event.message && event.message.text) {
-              processMessage(event);
+              const h =processMessage(event);
+              console.log("TESTING ......");
+              console.log(h);
             }
           });
         });
-        
+
         console.log(res);
         res.status(200).end();
       }
