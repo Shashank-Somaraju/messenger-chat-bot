@@ -12,14 +12,14 @@
             //console.log(event.message.text);
             if (event.message && event.message.text) {
               const h =processMessage(event);
-              console.log("TESTING ......");
+              console.log("TESTING ...... ");
               console.log(h);
             }
           });
         });
 
         console.log(res);
-        res.status(200).end();
+        res.status(200).send('EVENT_RECEIVED');
       }
     };
   
