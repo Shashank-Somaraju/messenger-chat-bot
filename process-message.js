@@ -42,14 +42,14 @@
         }
       );
     }    
-    console.log(sendTextMessage);
+    //console.log(sendTextMessage);
 
 
 
     module.exports = (event) => {
       const userId = event.sender.id;
       const message = event.message.text;
-      console.log("testing 1");
+      //console.log("testing 1");
       //console.log(userId);
       //console.log(message);
 
