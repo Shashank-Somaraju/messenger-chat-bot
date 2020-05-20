@@ -71,4 +71,5 @@
         .catch(err => {
           console.error('ERROR:', err);
         });
-    };
+    }
+
