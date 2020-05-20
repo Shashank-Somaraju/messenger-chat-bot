@@ -62,11 +62,13 @@
           },
         },
       };
-      //console.log(request);
+      console.log(request);
       sessionClient
         .detectIntent(request)
         .then(responses => {
           const result = responses[0].queryResult;
+          console.log("response from bot:");
+          console.log(result)
           return sendTextMessage(userId, result.fulfillmentText);
         })
         .catch(err => {
