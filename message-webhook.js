@@ -15,7 +15,8 @@
             }
           });
         });
-        //res.send(sendTextMessage);
+        
+        console.log(res);
         res.status(200).end();
       }
     };
