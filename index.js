@@ -16,9 +16,9 @@ require('dotenv').config({ path: './variables.env' });
   app.use(bodyParser.urlencoded({ extended: true }));
 
 
-  console.log("here1");
+  //console.log("here1");
   app.get('/webhook', verifyWebhook);
-  console.log("here2");
+  //console.log("here2");
   app.post('/webhook', messageWebhook);
 
   app.listen(process.env.PORT || 1337, () => console.log('Express server is listening on port 1337'));
