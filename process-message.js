@@ -23,8 +23,8 @@
     const { FACEBOOK_ACCESS_TOKEN } = process.env;
 
     const sendTextMessage = (userId, text) => {
-      return fetch(
-        `https://graph.facebook.com/v2.6/me/messages?access_token=${FACEBOOK_ACCESS_TOKEN}`,
+        return fetch(
+        `https://graph.facebook.com/v7.0/me/messages?access_token=<PAGE_ACCESS_TOKEN>`,
         {
           headers: {
             'Content-Type': 'application/json',
@@ -41,8 +41,9 @@
           }),
         }
       );
-    }
     console.log(sendTextMessage);
+
+
 
     module.exports = (event) => {
       const userId = event.sender.id;

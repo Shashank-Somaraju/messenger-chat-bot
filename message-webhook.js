@@ -2,14 +2,10 @@
    const processMessage = require('./process-message');
    console.log("hereb");
    module.exports = (req, res) => {
-      console.log("herec");
-      if (req.body.object === 'page') {
-        console.log(req.body.object);
+      if (req.body.object === "page") {
         req.body.entry.forEach(entry => {
           entry.messaging.forEach(event => {
             if (event.message && event.message.text) {
-              console.log("event");
-              console.log(event);
               processMessage(event);
             }
           });
