@@ -41,6 +41,7 @@
           }),
         }
       );
+    }    
     console.log(sendTextMessage);
 
 
@@ -72,4 +73,3 @@
           console.error('ERROR:', err);
         });
     }
-
