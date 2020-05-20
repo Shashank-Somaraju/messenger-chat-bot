@@ -62,7 +62,7 @@
           },
         },
       };
-      console.log(request);
+      //console.log(request);
       sessionClient
         .detectIntent(request)
         .then(responses => {
