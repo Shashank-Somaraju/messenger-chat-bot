@@ -67,7 +67,7 @@
         .detectIntent(request)
         .then(responses => {
           const result = responses[0].queryResult;
-          console.log("response from bot:");
+          console.log("BOT BOT BOT:");
           console.log(result)
           return sendTextMessage(userId, result.fulfillmentText);
         })
