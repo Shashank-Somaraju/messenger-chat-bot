@@ -42,7 +42,7 @@
         }
       );
     }    
-    //console.log(sendTextMessage);
+    console.log(sendTextMessage);
 
 
 
@@ -70,6 +70,7 @@
           console.log("BOT BOT BOT:");
           console.log(result);
           console.log("END END END");
+          console.log(result.fulfillmentText);
           return sendTextMessage(userId, result.fulfillmentText);
         })
         .catch(err => {
