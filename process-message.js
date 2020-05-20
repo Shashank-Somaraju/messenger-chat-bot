@@ -24,7 +24,7 @@
 
     const sendTextMessage = (userId, text) => {
         return fetch(
-        `https://graph.facebook.com/v7.0/me/messages?access_token=<PAGE_ACCESS_TOKEN>`,
+        `https://graph.facebook.com/v7.0/me/messages?access_token=<FACEBOOK_ACCESS_TOKEN>`,
         {
           headers: {
             'Content-Type': 'application/json',
