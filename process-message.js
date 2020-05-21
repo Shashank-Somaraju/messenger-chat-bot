@@ -40,7 +40,7 @@
             },
           }),
         }
-      )
+      );
     }  
 
     console.log(sendTextMessage);
