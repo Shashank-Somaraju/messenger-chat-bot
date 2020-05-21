@@ -22,7 +22,7 @@
     // Don't forget to add it to your `variables.env` file.
     const { FACEBOOK_ACCESS_TOKEN } = process.env;
 
-    const sendTextMessage = (userId, text) => {
+    function sendTextMessage(userId, text) {
         return fetch(
         `https://graph.facebook.com/v2.6/me/messages?access_token=<FACEBOOK_ACCESS_TOKEN>`,
         {
@@ -41,8 +41,8 @@
           }),
         }
       );
-      console.log("RUNNING HERE ...")  
-    };  
+      console.log("RUNNING HERE ...") ; 
+    }
 
     console.log(sendTextMessage);
 
