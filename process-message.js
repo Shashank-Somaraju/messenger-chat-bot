@@ -23,8 +23,9 @@
     const { FACEBOOK_ACCESS_TOKEN } = process.env;
 
     function sendTextMessage(userId, text) {
+      console.log("BEFORE API CALL...")
         return fetch(
-        `https://graph.facebook.com/v2.6/me/messages?access_token=<FACEBOOK_ACCESS_TOKEN>`,
+        "https://graph.facebook.com/v7.0/me/messages?access_token=<FACEBOOK_ACCESS_TOKEN>",
         {
           headers: {
             'Content-Type': 'application/json',
@@ -51,9 +52,9 @@
     module.exports = (event) => {
       const userId = event.sender.id;
       const message = event.message.text;
-      console.log("testing 1");
-      console.log(userId);
-      console.log(message);
+      //console.log("testing 1");
+      //console.log(userId);
+      //console.log(message);
 
       const request = {
         session: sessionPath,
@@ -69,7 +70,7 @@
         .detectIntent(request)
         .then(responses => {
           const result = responses[0].queryResult;
-          console.log("BOT BOT BOT:");
+          //console.log("BOT BOT BOT:");
           console.log(result);
           console.log("END END END");
           console.log(result.fulfillmentText);
