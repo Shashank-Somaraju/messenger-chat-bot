@@ -7,7 +7,7 @@ require('dotenv').config({ path: './variables.env' });
 
   const express = require('express');
   const bodyParser = require('body-parser');
-  const request = require('request'),
+  const request = require('request');
   const verifyWebhook = require('./verify-webhook');
   const messageWebhook = require('./message-webhook');
 
