@@ -67,8 +67,8 @@
         .then(responses => {
           const result = responses[0].queryResult;
           //console.log("BOT BOT BOT:");
-          console.log(result);
-          console.log("END END END");
+          console.log("Response from BOT => " + result);
+          //console.log("END END END");
           console.log(result.fulfillmentText);
           return sendTextMessage(userId, result.fulfillmentText);
           console.log("TEXT SENT ...");
