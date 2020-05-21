@@ -41,7 +41,8 @@
           }),
         }
       );
-    }  
+      console.log("RUNNING HERE ...")  
+    };  
 
     console.log(sendTextMessage);
 
