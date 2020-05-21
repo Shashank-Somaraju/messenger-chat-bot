@@ -24,7 +24,7 @@
 
     const sendTextMessage = (userId, text) => {
         return fetch(
-        `https://graph.facebook.com/v2.6/me/messages?access_token="EAAEinZCXNTnQBACIHFIZBCqKHcZC1gWLMedwjZAPm8KXLBVOMIpl6YfhAmBe2pciwNZA7R6ZApgHzixCKG2IgnaAdo6eM8ZBxFPRANvYHxH1R8ZAnOPhgfNQoUHBD03N7bq0gjrg7Y1BL8DLPeNWjlUaUZBGtr98pE2OZCZA1F4Bk13GwZDZD"`,
+        `https://graph.facebook.com/v2.6/me/messages?access_token=<FACEBOOK_ACCESS_TOKEN>`,
         {
           headers: {
             'Content-Type': 'application/json',
@@ -41,7 +41,7 @@
           }),
         }
       )
-    }  ;  
+    };  
 
     console.log(sendTextMessage);
 
@@ -73,6 +73,7 @@
           console.log("END END END");
           console.log(result.fulfillmentText);
           return sendTextMessage(userId, result.fulfillmentText);
+          console.log("TEXT SENT ...");
         })
         .catch(err => {
           console.error('ERROR:', err);
