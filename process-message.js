@@ -77,7 +77,8 @@
           console.log(result.fulfillmentText);
           if (result.fulfillmentText.includes("Question")){
             console.log("SHOULD SEND BUTTON");
-            return sendButton(userId,["postback","postback","postback","postback"], split_question(result.fulfillmentText), options_array,["Option1","Option2","Option3","Option4"], "tall");
+            //return sendButton(userId,["postback","postback","postback","postback"], split_question(result.fulfillmentText), options_array,["Option1","Option2","Option3","Option4"], "tall");
+            return sendButton(userId,["postback"], "Test Title",["TEst button"],["option1"],"tall");
           }
           else{
             console.log("SENDING TEXT");
@@ -172,7 +173,7 @@ function sendButton(recipientId,type,text,payload,caption,size){
 function callSendAPI(messageData) {
         request({
                 //uri:'https://graph.facebook.com/v7.0/me/messages?access_token=${FACEBOOK_ACCESS_TOKEN}'
-                uri: 'https://graph.facebook.com/v7.0/me/messages',
+                uri: 'https://graph.facebook.com/v2.6/me/messages',
                 qs: { access_token: token },
                 method: 'POST',
                 json: messageData
