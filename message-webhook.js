@@ -1,5 +1,6 @@
    //console.log("herea");
    const processMessage = require('./process-message');
+   const processPayload = require('./process_payload');
    //console.log("hereb");
    module.exports = (req, res) => {
     console.log(req);
@@ -16,7 +17,7 @@
               console.log(h);
             }
             else if(event.postback){
-              processMessage(event);
+              processPayload(event);
             }
           });
         });
