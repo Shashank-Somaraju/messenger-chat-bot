@@ -93,7 +93,7 @@
 
 
 function check_if_question(text){
-  if text.includes("Question" || "question"){
+  if (text.includes("Question" || "question"){
     console.log(text.includes("Question" || "question"));
     return true;
   }
