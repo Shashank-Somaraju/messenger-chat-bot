@@ -112,7 +112,7 @@ function split_question(text){
   var arr = arr[0].split("1.");
   var option_1= arr[1];
   while(options_array.length > 0) {
-    options_arrayop.pop();
+    options_array.pop();
   }
   options_array.push(option_1);
   options_array.push(option_2);
