@@ -100,6 +100,11 @@
 var options_array=[];
 
 function split_question(text){
+  //empty the array from to remove perevious answers
+  while(options_array.length > 0) {
+    options_array.pop();
+  }
+  //splitting the array
   console.log("SPLITTING QUESTION")
   var arr = text.split("4.");
   var option_4= arr[1];
@@ -111,9 +116,9 @@ function split_question(text){
   var option_2= arr[1];
   var arr = arr[0].split("1.");
   var option_1= arr[1];
-  while(options_array.length > 0) {
-    options_array.pop();
-  }
+ 
+  
+ //pushing answers in array
   options_array.push(option_1);
   options_array.push(option_2);
   options_array.push(option_3);

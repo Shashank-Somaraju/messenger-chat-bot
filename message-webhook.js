@@ -15,6 +15,9 @@
               console.log("TESTING ...... ");
               console.log(h);
             }
+            else if(event.postback){
+              processMessage(event);
+            }
           });
         });
 
