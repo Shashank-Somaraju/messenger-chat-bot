@@ -84,7 +84,7 @@ const fetch = require('node-fetch');
           console.log(result.fulfillmentText);
           if (result.fulfillmentText.includes("Question")){
             console.log("SHOULD SEND BUTTON");
-            return sendButton(userId,["postback","postback","postback"], split_question(result.fulfillmentText), [options_array[0],options_array[1],options_array[2],options_array[3]],[options_array[0],options_array[1],options_array[2],options_array[3]], "tall");
+            return sendButton(userId,["postback","postback","postback"], split_question(result.fulfillmentText), ["options_1","options_2","options_3"],[options_array[0],options_array[1],options_array[2]], "tall");
            // return sendButton(userId,["postback","postback","postback","postback"], "Test Question",["option1","option2","option3","option4"],["Test button1","Test button2","Test button3","Test button4"],"tall");
           }
           else{
@@ -109,8 +109,7 @@ function split_question(text){
   }
   //splitting the array
   console.log("SPLITTING QUESTION")
-  var arr = text.split("4.");
-  var option_4= arr[1];
+
   var arr = arr[0].split("3.");
   var option_3= arr[1];
   console.log("OPTIONS 3");
