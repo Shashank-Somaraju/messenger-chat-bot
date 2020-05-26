@@ -20,12 +20,46 @@ const fetch = require('node-fetch');
     const sessionClient = new dialogflow.SessionsClient(config);
 
     const sessionPath = sessionClient.sessionPath(projectId, sessionId);
+
+
+
+    const { FACEBOOK_ACCESS_TOKEN } = process.env;
+
+    const sendTextMessage = (userId, text) => {
+  return fetch(
+    `https://graph.facebook.com/v7.0/me/messages?access_token=${FACEBOOK_ACCESS_TOKEN}`,
+    {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        messaging_type: 'RESPONSE',
+        recipient: {
+          id: userId,
+        },
+        message: {
+          text,
+        },
+      }),
+    }
+  );
+}
+
+
+
+
+
+
+
+
+
  module.exports = (event) => {
       var userId = event.sender.id;
       //var message = event.message.text;
       console.log("EVENT SHOULD START HERE");
       console.log(event);
-      var message = event.postback.payload;
+      var message = event.postback.title;
       //console.log("testing 1");
       //console.log(userId);
       //console.log(message);
@@ -55,7 +89,7 @@ const fetch = require('node-fetch');
           }
           else{
             console.log("SHOLD NOT BE SENDING TEXT");
-            //return sendTextMessage(userId, result.fulfillmentText);
+            return sendTextMessage(userId, result.fulfillmentText);
           }
 
           console.log("TEXT SENT ...");
