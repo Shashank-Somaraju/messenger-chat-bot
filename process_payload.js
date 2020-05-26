@@ -110,7 +110,7 @@ function split_question(text){
   //splitting the array
   console.log("SPLITTING QUESTION");
 
-  var arr = arr[0].split("3.");
+  var arr = text.split("3.");
   var option_3= arr[1];
   console.log("OPTIONS 3");
   console.log(option_3);
