@@ -79,8 +79,10 @@
             console.log("GOING TO SEND BUTTON");
             return sendButton(userId,["postback","postback","postback","postback"], split_question(result.fulfillmentText), options_array,["Option1","Option2","Option3","Option4"], tall  );
           }
-          else
+          else{
+            console.log("SENDING TEXT ONLY.. MF");
             return sendTextMessage(userId, result.fulfillmentText);
+          }
 
           console.log("TEXT SENT ...");
         })
