@@ -77,8 +77,8 @@
           console.log(result.fulfillmentText);
           if (result.fulfillmentText.includes("Question")){
             console.log("SHOULD SEND BUTTON");
-            //return sendButton(userId,["postback","postback","postback","postback"], split_question(result.fulfillmentText), options_array,["Option1","Option2","Option3","Option4"], "tall");
-            return sendButton(userId,["postback"], "Test Title",["TEst button"],["option1"],"tall");
+            //return sendButton(userId,["postback","postback","postback","postback"], split_question(result.fulfillmentText), ["Option1","Option2","Option3","Option4"],options_array, "tall");
+            return sendButton(userId,["postback","postback"], "Test Question",["option1","option2"],["Test button1","Test button2"],"tall");
           }
           else{
             console.log("SENDING TEXT");
