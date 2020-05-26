@@ -77,8 +77,8 @@
           console.log(result.fulfillmentText);
           if (result.fulfillmentText.includes("Question")){
             console.log("SHOULD SEND BUTTON");
-            return sendButton(userId,["postback","postback","postback","postback"], split_question(result.fulfillmentText), ["Option1","Option2","Option3","Option4"],[options_array[0],options_array[1],options_array[2],options_array[3]], "tall");
-            //return sendButton(userId,["postback","postback"], "Test Question",["option1","option2"],["Test button1","Test button2"],"tall");
+            //return sendButton(userId,["postback","postback","postback","postback"], split_question(result.fulfillmentText), ["Option1","Option2","Option3","Option4"],[options_array[0],options_array[1],options_array[2],options_array[3]], "tall");
+            return sendButton(userId,["postback","postback","postback","postback"], "Test Question",["option1","option2","option_3","option_4"],["Test button1","Test button2","Test 3","Test 4"],"tall");
           }
           else{
             console.log("SENDING TEXT");
@@ -113,8 +113,12 @@ function split_question(text){
   options_array.push(option_2);
   options_array.push(option_3);
   options_array.push(option_4);
+  console.log("OPTIONS HERE");
+  console.log(options_array);
   question = arr[0];
   return question;
+  console.log("Question HERE");
+  console.log(question);
 }
 
 
