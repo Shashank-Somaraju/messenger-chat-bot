@@ -23,6 +23,8 @@ const fetch = require('node-fetch');
  module.exports = (event) => {
       var userId = event.sender.id;
       //var message = event.message.text;
+      console.log(EVENT SHOULD START HERE);
+      console.log(event);
       var message = event.postback.payload;
       //console.log("testing 1");
       //console.log(userId);
