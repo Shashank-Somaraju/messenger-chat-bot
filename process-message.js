@@ -75,7 +75,7 @@
 
 
 
-          if(check_if_question(result.fulfillmentText)){
+          if((result.fulfillmentText.includes("Question")){
             console.log("GOING TO SEND BUTTON");
             return sendButton(userId,["postback","postback","postback","postback"], split_question(result.fulfillmentText), options_array,["Option1","Option2","Option3","Option4"], tall  );
           }
@@ -92,12 +92,6 @@
     }
 
 
-function check_if_question(text){
-  if (text.includes("Question" || "question"){
-    console.log(text.includes("Question" || "question"));
-    return true;
-  }
-}  
 
 
 
