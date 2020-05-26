@@ -105,11 +105,15 @@ function split_question(text){
   var option_4= arr[1];
   var arr = arr[0].split("3.");
   var option_3= arr[1];
+  console.log("OPTIONS 3");
+  console.log(option_3);
   var arr = arr[0].split("2.");
   var option_2= arr[1];
   var arr = arr[0].split("1.");
   var option_1= arr[1];
-  option_array=[];
+  while(options_array.length > 0) {
+    options_arrayop.pop();
+  }
   options_array.push(option_1);
   options_array.push(option_2);
   options_array.push(option_3);
