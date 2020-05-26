@@ -102,13 +102,13 @@ var options_array=[];
 function split_question(text){
   console.log("SPLITTING QUESTION")
   var arr = text.split("4.");
-  option_4= arr[1];
+  var option_4= arr[1];
   var arr = arr[0].split("3.");
-  option_3= arr[1];
+  var option_3= arr[1];
   var arr = arr[0].split("2.");
-  option_2= arr[1];
+  var option_2= arr[1];
   var arr = arr[0].split("1.");
-  option_1= arr[1];
+  var option_1= arr[1];
   options_array.push(option_1);
   options_array.push(option_2);
   options_array.push(option_3);
