@@ -75,7 +75,7 @@
 
 
 
-          if(check_if_question(result.fulfillmentText)==1){
+          if(check_if_question(result.fulfillmentText)){
             console.log("GOING TO SEND BUTTON");
             return sendButton(userId,["postback","postback","postback","postback"], split_question(result.fulfillmentText), options_array,["Option1","Option2","Option3","Option4"], tall  );
           }
@@ -93,18 +93,13 @@
 
 
 function check_if_question(text){
-  console.log("CHECHING QUESTION HERE");
-  for (var i = text.length - 1; i >= 0; i--) {
-    if(text[i]==?){
-
-      break;
-      return 1;
-    }
-    else
-      return 0;
+  if text.includes("Question" || "question"){
+    console.log(text.includes("Question" || "question"));
+    return true;
   }
+}  
 
-}
+
 
 
 var options_array=[];
