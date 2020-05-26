@@ -76,7 +76,7 @@
 
 
           if(check_if_question(result.fulfillmentText)==true){
-
+            console.log("GOING TO SEND BUTTON");
             return sendButton(userId,["postback","postback","postback","postback"], split_question(result.fulfillmentText), options_array,["Option1","Option2","Option3","Option4"], tall  );
           }
           else
@@ -91,6 +91,7 @@
 
 
 function check_if_question(text){
+  console.log("CHECHING QUESTION HERE");
   for (var i = text.length - 1; i >= 0; i--) {
     if(text[i]=="?"){
 
@@ -107,6 +108,7 @@ function check_if_question(text){
 var options_array=[];
 
 function split_question(text){
+  console.log("SPLITTING QUESTION")
   var arr = text.split("4.");
   option_4= arr[1];
   var arr = arr[0].split("3.");
@@ -179,7 +181,7 @@ function sendButton(recipientId,type,text,payload,caption,size){
 function callSendAPI(messageData) {
         request({
                 //uri:'https://graph.facebook.com/v7.0/me/messages?access_token=${FACEBOOK_ACCESS_TOKEN}'
-                uri: 'https://graph.facebook.com/v2.6/me/messages',
+                uri: 'https://graph.facebook.com/v7.0/me/messages',
                 qs: { access_token: token },
                 method: 'POST',
                 json: messageData
