@@ -1,5 +1,8 @@
     const fetch = require('node-fetch');
+    const request = require('request');
     let token ='EAAEinZCXNTnQBACIHFIZBCqKHcZC1gWLMedwjZAPm8KXLBVOMIpl6YfhAmBe2pciwNZA7R6ZApgHzixCKG2IgnaAdo6eM8ZBxFPRANvYHxH1R8ZAnOPhgfNQoUHBD03N7bq0gjrg7Y1BL8DLPeNWjlUaUZBGtr98pE2OZCZA1F4Bk13GwZDZD';
+    
+
 
     // You can find your project ID in your Dialogflow agent settings
     const projectId = 'my-project-97974'; //https://dialogflow.com/docs/agents#settings
@@ -72,15 +75,12 @@
           console.log(result);
           //console.log("END END END");
           console.log(result.fulfillmentText);
-
-
-
           if (result.fulfillmentText.includes("Question")){
-            console.log("GOING TO SEND BUTTON");
+            console.log("SHOULD SEND BUTTON");
             return sendButton(userId,["postback","postback","postback","postback"], split_question(result.fulfillmentText), options_array,["Option1","Option2","Option3","Option4"], "tall");
           }
           else{
-            console.log("SENDING TEXT ONLY.. MF");
+            console.log("SENDING TEXT");
             return sendTextMessage(userId, result.fulfillmentText);
           }
 
