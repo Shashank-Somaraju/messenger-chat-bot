@@ -95,7 +95,7 @@
 function check_if_question(text){
   console.log("CHECHING QUESTION HERE");
   for (var i = text.length - 1; i >= 0; i--) {
-    if(text[i]=="?"){
+    if(text[i]==?){
 
       break;
       return 1;
